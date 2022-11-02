@@ -7,3 +7,7 @@ let alaternativePrint = (mess as string).endsWith('e');
 
 console.log(printMess);
 // console.log(alaternativePrint);
+
+let code: any = 6726;
+let employeeCode = <number> code;
+let staffCode = code as number;

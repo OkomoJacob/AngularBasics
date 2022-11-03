@@ -1,17 +1,14 @@
-// When working with a function which takes multiple arguments, you interfcae them(But using the Pascal naming convention)
+// When working with a function which takes multiple arguments, you interface them(But using the Pascal naming convention)
 var NewPoint = /** @class */ (function () {
-    function NewPoint() {
+    function NewPoint(x, y) {
+        this.x = x;
+        this.y = y;
     }
-    NewPoint.prototype.draw = function () {
+    NewPoint.prototype.drawPoint = function () {
         // Function to draw point
-        console.log('X: ' + this.a + ' and Y: ' + this.b);
-    };
-    NewPoint.prototype.getDistance = function (another) {
-        //
+        console.log('X: ' + this.x + ' and Y: ' + this.y);
     };
     return NewPoint;
 }());
-var point = new NewPoint;
-point.a = 2;
-point.b = 5;
-point.draw();
+var newPoint = new NewPoint(5, 8); // the let point is an object( Instance of a class)
+newPoint.drawPoint();

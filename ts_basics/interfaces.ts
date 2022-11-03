@@ -1,4 +1,4 @@
-// When working with a function which takes multiple arguments, you interfcae them(But using the Pascal naming convention)
+// When working with a function which takes multiple arguments, you interface them (But using the Pascal naming convention)
 interface Point{
     x: number,
     y: number,

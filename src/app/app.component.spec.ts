@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angubasics'`, () => {
+  it(`should have as title 'angu-basics'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angubasics');
+    expect(app.title).toEqual('angu-basics');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angubasics app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('ng-test app is running!');
   });
 });

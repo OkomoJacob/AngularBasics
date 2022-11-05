@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angubasics": {
+    "ng-test": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angubasics",
+            "outputPath": "dist/ng-test",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angubasics:build:production"
+              "browserTarget": "ng-test:build:production"
             },
             "development": {
-              "browserTarget": "angubasics:build:development"
+              "browserTarget": "ng-test:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angubasics:build"
+            "browserTarget": "ng-test:build"
           }
         },
         "test": {
@@ -97,5 +101,6 @@
         }
       }
     }
-  }
+  },
+  "defaultProject": "ng-test"
 }
